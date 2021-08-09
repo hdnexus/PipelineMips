@@ -3,6 +3,7 @@
         "*.env.development": "env",
         "*.env.production": "env",
         "*.env.local": "env",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
