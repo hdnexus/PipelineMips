@@ -1,4 +1,4 @@
-<h1>:bookmark_tabs: Trabalho de Organização de Computadores - Simulador de Pipeline</h1>
+<h1>:bookmark_tabs: Trabalho de OC - Simulador de Pipeline</h1>
 
 >Atividade para a disciplina de Organização de Computadores - UFJF
 
