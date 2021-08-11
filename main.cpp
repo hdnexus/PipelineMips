@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <cstdlib>
 #include <fstream>
+#include <math.h>
+#include "Classes/Util/Util.h"
 
 using namespace std;
 
@@ -20,6 +22,12 @@ void leArquivoTexto(string filename)
   }
   arq.close();
 }
+
+int binaryStringToInt(string binary){
+  
+    return stoi(binary,0,2);   
+}
+
 
 void menu()
 {
@@ -79,5 +87,9 @@ void lePeloTeclado()
 
 int main(int argc, char *argv[])
 {
-  menu();
+  //menu();
+
+  Util util;
+  string stringA = "1111";
+  cout << util.binaryStringToInt(stringA);  
 }
