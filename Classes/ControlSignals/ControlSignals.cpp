@@ -14,7 +14,7 @@ ControlSignals::ControlSignals()
   this->Jump = 0;
 }
 
-void ControlSignals::setControlSignals(unsigned int opcode)
+void ControlSignals::setControlSignals(int opcode)
 {
   if (opcode == 0) //R format: add, sub, and, or, slt, sll, jr - OK
   {

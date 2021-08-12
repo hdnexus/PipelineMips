@@ -1,4 +1,3 @@
-
 using namespace std;
 
 class ControlSignals
@@ -6,18 +5,18 @@ class ControlSignals
 private:
 public:
   bool RegDst;
-  bool Jump;
-  bool Branch;
-  bool MemRead;
+  bool ALUSrc;
   bool MemtoReg;
+  bool RegWrite;
+  bool MemRead;
+  bool MemWrite;
+  bool Branch;
   bool ALUOp1;
   bool ALUOp0;
-  bool MemWrite;
-  bool ALUSrc;
-  bool RegWrite;
+  bool Jump;
 
   ControlSignals();
   ~ControlSignals();
 
-  void setControlSignals(unsigned int opcode);
+  void setControlSignals(int opcode);
 };
