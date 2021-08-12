@@ -2,7 +2,6 @@
 #include <iomanip>
 #include <cstdlib>
 #include <fstream>
-
 using namespace std;
 
 void leArquivoTexto(string filename)
