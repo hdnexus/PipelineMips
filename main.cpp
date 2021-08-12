@@ -5,6 +5,7 @@
 #include <math.h>
 #include "Classes/Util/Util.h"
 #include "Classes/FileHandler/FileHandler.h"
+#include "Classes/Mips/Mips.h"
 
 using namespace std;
 
@@ -57,6 +58,8 @@ int main(int argc, char *argv[])
     cin >> filename;
     cout << "Saida: " << endl;
     fileHandler.readFile(filename);
+    Mips mips;
+    cout << endl << "Valor do mips : " << mips.getOpcodeValue(8) << endl;
   }
 
 
