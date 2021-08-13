@@ -13,7 +13,7 @@ class Mips
 private:
 public:
   Mips();
-  bitset<6> getOpcodeValue(int binaryValue);
+  int getOpcodeValue(int binaryValue);
 };
 
 #endif
