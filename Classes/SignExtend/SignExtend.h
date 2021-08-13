@@ -10,6 +10,7 @@ private:
 public:
   SignExtend();
   ~SignExtend();
+  unsigned int ExtendingSign(unsigned int sign);
 };
 
 #endif

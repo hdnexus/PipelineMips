@@ -18,5 +18,5 @@ public:
   ControlSignals();
   ~ControlSignals();
 
-  void setControlSignals(int opcode);
+  void setControlSignals(unsigned int opcode);
 };
