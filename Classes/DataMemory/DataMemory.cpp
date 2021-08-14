@@ -1,11 +1,11 @@
 #include "./DataMemory.h"
 
-//construtor da classe
+
 DataMemory::DataMemory()
 {
+    memory = new unsigned int[512];
 }
 
-//destrutor da classe
 DataMemory::~DataMemory()
 {
 }

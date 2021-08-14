@@ -99,3 +99,40 @@ unsigned int Mips::extractRs(int value)
 
    return rs.to_ulong();
 }
+
+
+unsigned int Mips::extractAddress(int value)
+{
+   bitset<32> binary(value);
+
+   bitset<26> address;  
+   int j = 25;
+
+   for (int i = 0; i < 26; i++)
+   {
+      address.set(j, binary[25 - i]);
+      j--;
+   }
+
+   cout << "adress resultante : " << address << endl;
+
+   return address.to_ulong();
+}
+
+unsigned int Mips::extractImmediate(int value)
+{
+   bitset<32> binary(value);
+
+   bitset<16> immediate;  
+   int j = 15;
+
+   for (int i = 0; i < 26; i++)
+   {
+      immediate.set(j, binary[15 - i]);
+      j--;
+   }
+
+   cout << "immediate resultante : " << immediate << endl;
+
+   return immediate.to_ulong();
+}

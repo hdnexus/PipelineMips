@@ -7,6 +7,7 @@ using namespace std;
 class DataMemory
 {
 private:
+  unsigned int* memory;
 public:
   DataMemory();
   ~DataMemory();

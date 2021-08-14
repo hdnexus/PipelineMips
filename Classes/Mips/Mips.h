@@ -20,6 +20,8 @@ public:
   unsigned int extractRd(int value);
   unsigned int extractShamt(int value);
   unsigned int extractFunct(int value);
+  unsigned int extractAddress(int value);
+  unsigned int extractImmediate(int value);
 };
 
 #endif
