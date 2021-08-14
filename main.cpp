@@ -6,6 +6,7 @@
 #include "Classes/Util/Util.h"
 #include "Classes/FileHandler/FileHandler.h"
 #include "Classes/Mips/Mips.h"
+#include "Classes/InstructionMemory/InstructionMemory.h"
 
 using namespace std;
 
@@ -44,8 +45,23 @@ void leArquivoTexto(string filename)
 int main(int argc, char *argv[])
 {
   FileHandler fileHandler;
+  Mips mips;
+  Util util;
+  InstructionMemory* Im = new InstructionMemory(100);
 
+  unsigned int valTeste = 577372292;
+
+  mips.extractFunct(valTeste);
+  mips.extractShamt(valTeste);
+  mips.extractRt(valTeste);
+  mips.extractRd(valTeste);
+  mips.extractRs(valTeste);
+
+  cout << "Teste " << Im->getNumberOfInstructions() << endl;
+
+  /*
   menu();
+  
   int option = 0;
   cin >> option;
 
@@ -77,4 +93,19 @@ int main(int argc, char *argv[])
   {
     cout << "Opção escolhida - execução direta" << endl;
   }
+  */
 }
+
+//Codigos de teste
+
+/*
+
+    cout << "Opcode : " << mips.getOpcodeValue(577372164) << endl;
+  cout << "Usando o extract : " << util.extractBits(577372164,0,6) << endl;
+  cout << "Opcode 2 : " << mips.getOpcodeValue(134217985) << endl;
+  cout << "Funct : " << mips.extractFunct(577372164) << endl;
+  cout << "Shamt : " << mips.extractShamt(577372164) << endl;
+  cout << "Shamt 2 : " << mips.extractShamt(577372292) << endl;
+
+
+*/

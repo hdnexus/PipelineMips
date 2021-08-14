@@ -7,9 +7,16 @@ using namespace std;
 class InstructionMemory
 {
 private:
+  unsigned int* instructionMemory;
+  int numberOfInstructions;
+
 public:
-  InstructionMemory();
+  InstructionMemory(int memorySize);
   ~InstructionMemory();
+  unsigned int getInstruction(int index);
+  void setInstruction(int index, unsigned int instruction);
+  int getNumberOfInstructions();
+
 };
 
 #endif
