@@ -14,6 +14,11 @@ private:
 public:
   Mips();
   int getOpcodeValue(int binaryValue);
+  int extractRs(int value);
+  int extractRt(int value);
+  int extractRd(int value);
+  int extractShamt(int value);
+  int extractFunct(int value);
 };
 
 #endif
