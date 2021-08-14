@@ -13,27 +13,32 @@ int Mips::getOpcodeValue(int binaryValue)
 int Mips::extractFunct(int value)
 {
    bitset<32> binary(value);
-   cout << "Bin que recebe : " << binary[1] << endl;
-   bitset<6> funct;
+   bitset<6> funct;  
+   int j = 5;
 
-   for (int i = 0; i < 6; i++){
-        funct[i+1] = binary[27 + i];
-        cout << "Valor no indice " << 27+i << " : " << binary[27+i] << endl;
+   for (int i = 0; i < 6; i++)
+   {
+      funct.set(j, binary[5 - i]);
+      j--;
    }
-    
 
-
-   cout << "Funct : " << funct << endl;
    return funct.to_ulong();
 }
 
 int Mips::extractShamt(int value)
 {
    bitset<32> binary(value);
-   bitset<5> shamt;
+
+   bitset<5> shamt;  
+   int j = 4;
 
    for (int i = 0; i < 5; i++)
-      shamt[i] = binary[25 - i];
+   {
+      shamt.set(j, binary[10 - i]);
+      j--;
+   }
+
+   cout << "Shamt resultante : " << shamt << endl;
 
    return shamt.to_ulong();
 }

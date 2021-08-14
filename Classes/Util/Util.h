@@ -11,7 +11,9 @@ private:
 public:
   Util();
   int binaryStringToInt(string binary);
-  unsigned int extractBits(uint32_t number,int startNumber, int numberOfBits);
+  unsigned int extractBits(unsigned int number,unsigned int  startNumber,unsigned int numberOfBits);
+  unsigned int extractBitsWithBitset(unsigned int number,unsigned int begin, unsigned int numberOfBits);
+
 };
 
 #endif

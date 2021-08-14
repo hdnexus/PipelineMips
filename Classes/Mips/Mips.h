@@ -11,6 +11,7 @@ using namespace std;
 class Mips
 {
 private:
+
 public:
   Mips();
   int getOpcodeValue(int binaryValue);
