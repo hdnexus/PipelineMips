@@ -1,6 +1,10 @@
 #ifndef SIGNEXTEND_H_INCLUDED
 #define SIGNEXTEND_H_INCLUDED
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <bitset>
+#include "../Util/Util.h"
 
 using namespace std;
 
@@ -10,7 +14,7 @@ private:
 public:
   SignExtend();
   ~SignExtend();
-  unsigned int ExtendingSign(unsigned int sign);
+  bitset<32> ExtendingSign(int immediate);
 };
 
 #endif

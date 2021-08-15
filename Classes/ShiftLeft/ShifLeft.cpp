@@ -9,3 +9,9 @@ ShiftLeft::ShiftLeft()
 ShiftLeft::~ShiftLeft()
 {
 }
+
+int ShiftLeft::Shiftting(int value)
+{
+  int shifftedValue = value << 2;
+  return shifftedValue;
+}

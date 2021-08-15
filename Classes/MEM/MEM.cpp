@@ -1,11 +1,11 @@
-#include "./IF_ID.h"
+#include "./MEM.h"
 
 //construtor da classe
-IF_ID::IF_ID()
+MEM::MEM()
 {
 }
 
 //destrutor da classe
-IF_ID::~IF_ID()
+MEM::~MEM()
 {
 }

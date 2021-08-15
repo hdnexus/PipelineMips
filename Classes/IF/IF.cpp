@@ -1,11 +1,11 @@
-#include "./ID_EX.h"
+#include "./IF.h"
 
 //construtor da classe
-ID_EX::ID_EX()
+IF::IF()
 {
 }
 
 //destrutor da classe
-ID_EX::~ID_EX()
+IF::~IF()
 {
 }
