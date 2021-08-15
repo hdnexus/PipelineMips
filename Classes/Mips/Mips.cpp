@@ -119,8 +119,9 @@ unsigned int Mips::extractAddress(int value)
    return address.to_ulong();
 }
 
-unsigned int Mips::extractImmediate(int value)
+int Mips::extractImmediate(int value)
 {
+   Util util;
    bitset<32> binary(value);
 
    bitset<16> immediate;  
@@ -134,5 +135,5 @@ unsigned int Mips::extractImmediate(int value)
 
    cout << "immediate resultante : " << immediate << endl;
 
-   return immediate.to_ulong();
+   return util.binaryStringToInt(immediate.to_string());
 }

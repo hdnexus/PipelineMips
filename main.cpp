@@ -61,6 +61,11 @@ int main(int argc, char *argv[])
   cout << Im->getInstruction(4) << endl;
   cout << "Teste " << Im->getNumberOfInstructions() << endl;
 
+  bitset<32> teste(-16);
+  bitset<32> teste2(-4);
+  cout << "Teste bitwise -16 :  " << teste << endl;
+  cout << "Teste bitwise -4 :  " << teste2 << endl;
+
   /*
   menu();
   

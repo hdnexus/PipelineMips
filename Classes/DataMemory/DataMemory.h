@@ -11,6 +11,8 @@ private:
 public:
   DataMemory();
   ~DataMemory();
+  void write(int positon, int value);
+  int  get(int position);
 };
 
 #endif

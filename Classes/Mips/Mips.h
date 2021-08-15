@@ -21,7 +21,7 @@ public:
   unsigned int extractShamt(int value);
   unsigned int extractFunct(int value);
   unsigned int extractAddress(int value);
-  unsigned int extractImmediate(int value);
+  int extractImmediate(int value);
 };
 
 #endif
