@@ -7,8 +7,24 @@
 #include "Classes/FileHandler/FileHandler.h"
 #include "Classes/Mips/Mips.h"
 #include "Classes/InstructionMemory/InstructionMemory.h"
+#include "Classes/Registers/Registers.h"
 
 using namespace std;
+
+void insereValTestesBe()
+{
+  Registers bankOfRegisters;
+
+  bankOfRegisters.writeRegister(1, 0, "zero", 1);
+  bankOfRegisters.writeRegister(2, 10, "t0", 1);
+  bankOfRegisters.writeRegister(3, 5, "t1", 1);
+  bankOfRegisters.writeRegister(4, 6, "t2", 1);
+  bankOfRegisters.writeRegister(5, 7, "t3", 1);
+  bankOfRegisters.writeRegister(6, 8, "t4", 1);
+  bankOfRegisters.writeRegister(7, 9, "t5", 1);
+
+  bankOfRegisters.printRegisters();
+}
 
 void menu()
 {
@@ -42,12 +58,12 @@ void leArquivoTexto(string filename)
 {
 }
 
-int main(int argc, char *argv[])
+void TesteExtracaoBitwise()
 {
   FileHandler fileHandler;
   Mips mips;
   Util util;
-  InstructionMemory* Im = new InstructionMemory(100);
+  InstructionMemory *Im = new InstructionMemory(100);
 
   unsigned int valTeste = 577372292;
 
@@ -57,7 +73,7 @@ int main(int argc, char *argv[])
   mips.extractRd(valTeste);
   mips.extractRs(valTeste);
 
-  Im->setInstruction(4,8444);
+  Im->setInstruction(4, 8444);
   cout << Im->getInstruction(4) << endl;
   cout << "Teste " << Im->getNumberOfInstructions() << endl;
 
@@ -65,7 +81,12 @@ int main(int argc, char *argv[])
   bitset<32> teste2(-4);
   cout << "Teste bitwise -16 :  " << teste << endl;
   cout << "Teste bitwise -4 :  " << teste2 << endl;
+}
 
+int main(int argc, char *argv[])
+{
+
+  insereValTestesBe();
   /*
   menu();
   
