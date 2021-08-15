@@ -20,7 +20,7 @@ bitset<32> SignExtend::ExtendingSign(int immediate)
   bitset<16> binary(immediate);             //immediate em binário
   string addImmediate = binary.to_string(); //string do immediate
 
-  int sign = binary[15];
+  int sign = binary[15]; //bit de sinal do immediate.
 
   if (sign == 0) // sinal positivo, adiciona 16 0's a esquerda
   {
