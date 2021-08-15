@@ -3,7 +3,7 @@
 //construtor da classe
 InstructionMemory::InstructionMemory(int memorySize)
 {
-    this->instructionMemory = new unsigned int[memorySize];
+    this->instructionMemory = new int[memorySize];
 }
 
 void InstructionMemory::setInstruction(int index, unsigned int instruction){
@@ -11,7 +11,7 @@ void InstructionMemory::setInstruction(int index, unsigned int instruction){
     this->numberOfInstructions ++;
 }   
 
-unsigned int InstructionMemory::getInstruction(int index){
+int InstructionMemory::getInstruction(int index){
     return this->instructionMemory[index / 4];
 }
 

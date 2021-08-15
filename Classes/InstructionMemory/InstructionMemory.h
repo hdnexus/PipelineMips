@@ -7,13 +7,13 @@ using namespace std;
 class InstructionMemory
 {
 private:
-  unsigned int* instructionMemory;
+  int* instructionMemory;
   int numberOfInstructions;
 
 public:
   InstructionMemory(int memorySize);
   ~InstructionMemory();
-  unsigned int getInstruction(int index);
+  int getInstruction(int index);
   void setInstruction(int index, unsigned int instruction);
   int getNumberOfInstructions();
 

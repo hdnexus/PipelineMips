@@ -57,6 +57,8 @@ int main(int argc, char *argv[])
   mips.extractRd(valTeste);
   mips.extractRs(valTeste);
 
+  Im->setInstruction(4,8444);
+  cout << Im->getInstruction(4) << endl;
   cout << "Teste " << Im->getNumberOfInstructions() << endl;
 
   /*

@@ -3,7 +3,7 @@
 
 DataMemory::DataMemory()
 {
-    memory = new unsigned int[512];
+    memory = new int[512];
 }
 
 DataMemory::~DataMemory()
