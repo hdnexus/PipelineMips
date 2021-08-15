@@ -6,8 +6,8 @@
 #include "Classes/Util/Util.h"
 #include "Classes/FileHandler/FileHandler.h"
 #include "Classes/Mips/Mips.h"
-#include "Classes/InstructionMemory/InstructionMemory.h"
-#include "Classes/Registers/Registers.h"
+#include "Classes/Components/InstructionMemory/InstructionMemory.h"
+#include "Classes/Components/Registers/Registers.h"
 
 using namespace std;
 
