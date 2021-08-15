@@ -10,7 +10,7 @@ private:
 public:
   ShiftLeft();
   ~ShiftLeft();
-  int Shiftting(int value);
+  int Shift(int value);
 };
 
 #endif
