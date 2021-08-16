@@ -21,9 +21,6 @@ string ALUControl::Output(unsigned int funct)
     if (funct == 0)
       return "SLL";
 
-    else if (funct == 8) //Não sei se esse daqui pertence aqui
-      return "JR";
-
     else if (funct == 32)
       return "ADD";
 

@@ -7,9 +7,17 @@ using namespace std;
 class PC
 {
 private:
+  int instructionAddrress;
+
 public:
-  PC();
-  ~PC();
+  PC(){}
+  ~PC(){}
+  int get(){
+    return this->instructionAddrress;
+  }
+  void set(int address){
+    this->instructionAddrress = address;
+  }
 };
 
 #endif

@@ -9,7 +9,6 @@ PipelineSimulator::PipelineSimulator()
 PipelineSimulator::~PipelineSimulator()
 {
 }
-
 void PipelineSimulator::startDirectSimulation()
 {
   /*

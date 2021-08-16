@@ -7,6 +7,7 @@ InstructionMemory::InstructionMemory(int memorySize)
 }
 
 void InstructionMemory::setInstruction(int index, unsigned int instruction){
+    
     this->instructionMemory[index /4 ] = instruction;
     this->numberOfInstructions ++;
 }   

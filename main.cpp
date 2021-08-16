@@ -8,8 +8,19 @@
 #include "Classes/Mips/Mips.h"
 #include "Classes/Components/InstructionMemory/InstructionMemory.h"
 #include "Classes/Components/Registers/Registers.h"
+#include "Classes/Components/ALU/ALU.h"
+#include "Classes/Components/IF_ID/IF_ID.h"
 
 using namespace std;
+
+void testeAlu(){
+  ALU alu;
+  IF_ID teste;
+  teste.setPcIncremented(2);
+  cout << teste.getPcIncremented() << endl;
+  cout << alu.add(1,3) << endl;
+  cout << alu.add(-1,-5) << endl;
+}
 
 void insereValTestesBe()
 {
@@ -85,8 +96,8 @@ void TesteExtracaoBitwise()
 
 int main(int argc, char *argv[])
 {
-
-  insereValTestesBe();
+  testeAlu();
+  //insereValTestesBe();
   /*
   menu();
   

@@ -1,5 +1,5 @@
 cd ./Classes && 
-g++ ./Util/Util.cpp ./FileHandler/FileHandler.cpp  ./Mips/Mips.cpp ./Components/Registers/Registers.cpp ./Components/Registers/Register.cpp  ./Components/InstructionMemory/InstructionMemory.cpp  ../main.cpp -o ../main
+g++ ./Util/Util.cpp ./FileHandler/FileHandler.cpp  ./Mips/Mips.cpp ./Components/ALU/ALU.cpp ./Components/IF_ID/IF_ID.h  ./Components/Registers/Registers.cpp ./Components/Registers/Register.cpp  ./Components/InstructionMemory/InstructionMemory.cpp ./Components/PC/PC.h  ../main.cpp -o ../main
 
 if [ $? -eq 0 ];then 
    echo "compilado com sucesso!"

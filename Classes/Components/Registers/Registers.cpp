@@ -4,10 +4,14 @@
 Registers::Registers()
 {
     this->registers.resize(32);
+    
+
+    this->registers[0].setName("zero");
+    this->registers[0].setValue(0);
 }
 
 bool Registers::checkIfPositionExitsts(int position){
-    return position >= 0 && position <= 31;
+    return position > 0 && position <= 31;
 }
 
 bool Registers::readRegister(
