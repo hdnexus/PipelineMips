@@ -112,10 +112,10 @@ void ControlSignals::setControlSignals(unsigned int opcode)
     this->RegWrite = 1;
     this->MemRead = 1;
     this->MemWrite = 0;
-    this->Jump = 0;
     this->Branch = 0;
     this->ALUOp1 = 0;
     this->ALUOp0 = 0;
+    this->Jump = 0;
   }
 
   if (opcode == 43) //sw - OK

@@ -10,6 +10,7 @@ private:
 public:
   ALU();
   ~ALU();
+  int ALUOperation(unsigned int input1, unsigned int input2);
 };
 
 #endif

@@ -1,3 +1,7 @@
+#ifndef CONTROLSIGNALS_H_INCLUDED
+#define CONTROLSIGNALS_H_INCLUDED
+#include <iostream>
+
 using namespace std;
 
 class ControlSignals
@@ -20,3 +24,5 @@ public:
 
   void setControlSignals(unsigned int opcode);
 };
+
+#endif

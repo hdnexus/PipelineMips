@@ -10,7 +10,8 @@ private:
 public:
   PipelineSimulator();
   ~PipelineSimulator();
-  void startSimulation();
+  void startDirectSimulation();
+  void startStepSimulation();
 };
 
 #endif
