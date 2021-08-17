@@ -9,10 +9,11 @@ class ALU
 {
 private:
   Mips mips;
+
 public:
   ALU();
   ~ALU();
-  int ALUOperation(unsigned int input1, unsigned int input2); 
+  int ALUOperation(unsigned int input1, unsigned int input2);
   int add(int a, int b);
 };
 

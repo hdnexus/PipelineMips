@@ -7,11 +7,13 @@ using namespace std;
 class Register
 {
 private:
-    string name;
-    int value;
+  string name;
+  int value;
+
 public:
-  Register(string name,int value);
+  Register(string name, int value);
   Register();
+  ~Register();
   void setName(string name);
   string getName();
   void setValue(int value);

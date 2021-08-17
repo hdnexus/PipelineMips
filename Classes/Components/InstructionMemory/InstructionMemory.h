@@ -7,7 +7,7 @@ using namespace std;
 class InstructionMemory
 {
 private:
-  int* instructionMemory;
+  int *instructionMemory;
   int numberOfInstructions;
 
 public:
@@ -16,7 +16,6 @@ public:
   int getInstruction(int index);
   void setInstruction(int index, unsigned int instruction);
   int getNumberOfInstructions();
-
 };
 
 #endif

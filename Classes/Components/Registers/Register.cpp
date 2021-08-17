@@ -1,13 +1,20 @@
 #include "Register.h"
 
+//construtor da classe
 Register::Register(string name, int value)
 {
     this->name = name;
     this->value = value;
 }
 
-Register::Register(){
-    
+//construtor da classe
+Register::Register()
+{
+}
+
+//destrutor da classe
+Register::~Register()
+{
 }
 
 void Register::setName(string name)

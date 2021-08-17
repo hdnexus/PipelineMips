@@ -1,6 +1,12 @@
 #include "./FileHandler.h"
 
+//construtor da classe
 FileHandler::FileHandler()
+{
+}
+
+//destrutor da classe
+FileHandler::~FileHandler()
 {
 }
 
@@ -17,12 +23,11 @@ vector<string> FileHandler::readFile(string filename)
       {
          getline(arq, linha);
          binaryLines.push_back(linha);
-         cout  << linha << endl;
+         cout << linha << endl;
       }
-   
+
       arq.close();
       return binaryLines;
-
    }
 
    else

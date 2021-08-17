@@ -7,27 +7,30 @@ using namespace std;
 class IF_ID
 {
 private:
-  int pcIncremented;
-  int instruction;
+    int pcIncremented;
+    int instruction;
 
 public:
-  IF_ID(){}
-  ~IF_ID(){}
-   void setInstruction(int instruction){
-       this->instruction = instruction;
-   }
-   void setPcIncremented(int value){
-       this->pcIncremented = value;
-   }
+    IF_ID() {}  //construtor da classe
+    ~IF_ID() {} //destrutor da classe
+    void setInstruction(int instruction)
+    {
+        this->instruction = instruction;
+    }
+    void setPcIncremented(int value)
+    {
+        this->pcIncremented = value;
+    }
 
-   int getPcIncremented(){
-       return this->pcIncremented;
-   }
+    int getPcIncremented()
+    {
+        return this->pcIncremented;
+    }
 
-   int getIstruction(){
-       return this->instruction;
-   }
-
+    int getIstruction()
+    {
+        return this->instruction;
+    }
 };
 
 #endif

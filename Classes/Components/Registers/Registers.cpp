@@ -4,13 +4,18 @@
 Registers::Registers()
 {
     this->registers.resize(32);
-    
 
     this->registers[0].setName("zero");
     this->registers[0].setValue(0);
 }
 
-bool Registers::checkIfPositionExitsts(int position){
+//destrutor da classe
+Registers::~Registers()
+{
+}
+
+bool Registers::checkIfPositionExitsts(int position)
+{
     return position > 0 && position <= 31;
 }
 
@@ -30,23 +35,20 @@ bool Registers::readRegister(
     return false;
 }
 
-bool Registers::writeRegister(int wrRegisterIndex,int value,string name,int regWrite){
-    if(regWrite && this->checkIfPositionExitsts(wrRegisterIndex)){
-        Register* reg = new Register(name,value);
+bool Registers::writeRegister(int wrRegisterIndex, int value, string name, int regWrite)
+{
+    if (regWrite && this->checkIfPositionExitsts(wrRegisterIndex))
+    {
+        Register *reg = new Register(name, value);
         this->registers[wrRegisterIndex] = *reg;
         return true;
     }
     return false;
 }
 
-void Registers::printRegisters(){
-    cout << "Imprimindo banco de registradores" << endl;
-    for(int i = 0 ; i < this->registers.size() ; i++)
-        cout << this->registers[i].getName() << endl;
-}
-
-
-//destrutor da classe
-Registers::~Registers()
+void Registers::printRegisters()
 {
+    cout << "Imprimindo banco de registradores" << endl;
+    for (int i = 0; i < this->registers.size(); i++)
+        cout << this->registers[i].getName() << endl;
 }

@@ -6,17 +6,20 @@ InstructionMemory::InstructionMemory(int memorySize)
     this->instructionMemory = new int[memorySize];
 }
 
-void InstructionMemory::setInstruction(int index, unsigned int instruction){
-    
-    this->instructionMemory[index /4 ] = instruction;
-    this->numberOfInstructions ++;
-}   
+void InstructionMemory::setInstruction(int index, unsigned int instruction)
+{
 
-int InstructionMemory::getInstruction(int index){
+    this->instructionMemory[index / 4] = instruction;
+    this->numberOfInstructions++;
+}
+
+int InstructionMemory::getInstruction(int index)
+{
     return this->instructionMemory[index / 4];
 }
 
-int InstructionMemory::getNumberOfInstructions(){
+int InstructionMemory::getNumberOfInstructions()
+{
     return this->numberOfInstructions;
 }
 

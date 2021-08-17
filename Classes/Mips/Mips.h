@@ -11,9 +11,9 @@ using namespace std;
 class Mips
 {
 private:
-
 public:
   Mips();
+  ~Mips();
   unsigned int getOpcodeValue(int binaryValue);
   unsigned int extractRs(int value);
   unsigned int extractRt(int value);

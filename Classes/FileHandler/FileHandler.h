@@ -11,6 +11,7 @@ class FileHandler
 private:
 public:
   FileHandler();
+  ~FileHandler();
   vector<string> readFile(string filename);
 };
 

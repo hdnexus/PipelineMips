@@ -1,6 +1,12 @@
 #include "./Mips.h"
 
+//construtor da classe
 Mips::Mips()
+{
+}
+
+//destrutor da classe
+Mips::~Mips()
 {
 }
 
@@ -12,7 +18,7 @@ unsigned int Mips::getOpcodeValue(int binaryValue)
 unsigned int Mips::extractFunct(int value)
 {
    bitset<32> binary(value);
-   bitset<6> funct;  
+   bitset<6> funct;
    int j = 5;
 
    for (int i = 0; i < 6; i++)
@@ -20,7 +26,7 @@ unsigned int Mips::extractFunct(int value)
       funct.set(j, binary[5 - i]);
       j--;
    }
-   
+
    cout << "Funct resultante : " << funct << endl;
 
    return funct.to_ulong();
@@ -30,7 +36,7 @@ unsigned int Mips::extractShamt(int value)
 {
    bitset<32> binary(value);
 
-   bitset<5> shamt;  
+   bitset<5> shamt;
    int j = 4;
 
    for (int i = 0; i < 5; i++)
@@ -44,12 +50,11 @@ unsigned int Mips::extractShamt(int value)
    return shamt.to_ulong();
 }
 
-
 unsigned int Mips::extractRd(int value)
 {
    bitset<32> binary(value);
 
-   bitset<5> rd;  
+   bitset<5> rd;
    int j = 4;
 
    for (int i = 0; i < 5; i++)
@@ -67,7 +72,7 @@ unsigned int Mips::extractRt(int value)
 {
    bitset<32> binary(value);
 
-   bitset<5> rt;  
+   bitset<5> rt;
    int j = 4;
 
    for (int i = 0; i < 5; i++)
@@ -81,12 +86,11 @@ unsigned int Mips::extractRt(int value)
    return rt.to_ulong();
 }
 
-
 unsigned int Mips::extractRs(int value)
 {
    bitset<32> binary(value);
 
-   bitset<5> rs;  
+   bitset<5> rs;
    int j = 4;
 
    for (int i = 0; i < 5; i++)
@@ -100,12 +104,11 @@ unsigned int Mips::extractRs(int value)
    return rs.to_ulong();
 }
 
-
 unsigned int Mips::extractAddress(int value)
 {
    bitset<32> binary(value);
 
-   bitset<26> address;  
+   bitset<26> address;
    int j = 25;
 
    for (int i = 0; i < 26; i++)
@@ -124,7 +127,7 @@ int Mips::extractImmediate(int value)
    Util util;
    bitset<32> binary(value);
 
-   bitset<16> immediate;  
+   bitset<16> immediate;
    int j = 15;
 
    for (int i = 0; i < 26; i++)
