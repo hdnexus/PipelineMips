@@ -15,6 +15,8 @@ public:
   IF();
   ~IF();
   void execute(PC pc,InstructionMemory Im);
+  int getCurrentInstruction();
+  int getCurrentPc();
 };
 
 #endif
