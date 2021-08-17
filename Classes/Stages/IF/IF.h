@@ -11,10 +11,13 @@ class IF
 {
 private:
   IF_ID if_id;
+
 public:
   IF();
   ~IF();
-  void execute(PC pc,InstructionMemory Im);
+  void execute(PC pc, InstructionMemory Im);
+  int getCurrentInstruction();
+  int getCurrentPc();
 };
 
 #endif
