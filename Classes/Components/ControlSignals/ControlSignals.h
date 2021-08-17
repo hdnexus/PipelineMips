@@ -15,6 +15,7 @@ public:
   bool MemRead;
   bool MemWrite;
   bool Branch;
+  bool BranchNotEqual;
   bool ALUOp1;
   bool ALUOp0;
   bool Jump;
@@ -22,7 +23,7 @@ public:
   ControlSignals();
   ~ControlSignals();
 
-  void setControlSignals(unsigned int opcode);
+  void setControlSignals(unsigned int opcode, unsigned int funct);
 };
 
 #endif
