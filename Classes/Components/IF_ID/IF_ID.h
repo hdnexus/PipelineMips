@@ -1,21 +1,23 @@
 #ifndef IF_ID_H_INCLUDED
 #define IF_ID_H_INCLUDED
 #include <iostream>
+#include "../InstructionMemory/Instruction.h"
 
 using namespace std;
+
 
 class IF_ID
 {
 private:
     int pcIncremented;
-    int instruction;
-
+    Instruction *instruction;
+    
 public:
-    IF_ID() {}  //construtor da classe
-    ~IF_ID() {} //destrutor da classe
-    void setInstruction(int instruction)
+    IF_ID() {} 
+    ~IF_ID() {} 
+    void setInstruction(Instruction instruction)
     {
-        this->instruction = instruction;
+        this->instruction = &instruction;
     }
     void setPcIncremented(int value)
     {
@@ -27,9 +29,9 @@ public:
         return this->pcIncremented;
     }
 
-    int getIstruction()
+    Instruction getIstruction()
     {
-        return this->instruction;
+        return *this->instruction;
     }
 };
 

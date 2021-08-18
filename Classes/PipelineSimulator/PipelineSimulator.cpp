@@ -1,8 +1,12 @@
 #include "./PipelineSimulator.h"
 
 //construtor da classe
-PipelineSimulator::PipelineSimulator()
+PipelineSimulator::PipelineSimulator(InstructionMemory *instructionMemory, DataMemory *dataMemory, Registers *bankOfRegisters)
 {
+  this->pc.set(0);
+  this->instructionMemory = instructionMemory;
+  this->dataMemory = dataMemory;
+  this->bankOfRegisters = bankOfRegisters;
 }
 
 //destrutor da classe
@@ -11,12 +15,19 @@ PipelineSimulator::~PipelineSimulator()
 }
 void PipelineSimulator::startDirectSimulation()
 {
-  /*
-  clock = 0;
-  while(PC < 128)
+
+  InstructionMemory *IM = new InstructionMemory(32);
+  int clock = 1;
+
+  while (this->pc.get() < 128)
   {
-    IF.doIF(); //Faz o estagio IF
-    clock++;
+    this->if_stage.execute(this->pc,*this->instructionMemory,&this->if_id); 
+
+    if(clock > 1)    
+      this->id_stage.execute();
+
+    //Faz o estagio IF
+    /*
     printInformation(clock, instrução, etc...); //printa informações do clock
 
     ID.doID(); //Faz o estagio ID
@@ -34,8 +45,10 @@ void PipelineSimulator::startDirectSimulation()
     WB.doWB(); //Faz o estagio WB 
     clock++;
     printInformation(clock, instrução, etc...); //printa informações do clock
+    */
+
+   clock++;
   }
-  */
 }
 
 void PipelineSimulator::startStepSimulation()

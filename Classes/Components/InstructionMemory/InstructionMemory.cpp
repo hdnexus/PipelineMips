@@ -3,17 +3,17 @@
 //construtor da classe
 InstructionMemory::InstructionMemory(int memorySize)
 {
-    this->instructionMemory = new int[memorySize];
+    this->instructionMemory.resize(memorySize);
 }
 
-void InstructionMemory::setInstruction(int index, unsigned int instruction)
+void InstructionMemory::setInstruction(int index,  int instruction)
 {
 
-    this->instructionMemory[index / 4] = instruction;
+    this->instructionMemory[index / 4] = *new Instruction(instruction);
     this->numberOfInstructions++;
 }
 
-int InstructionMemory::getInstruction(int index)
+Instruction InstructionMemory::getInstruction(int index)
 {
     return this->instructionMemory[index / 4];
 }
@@ -23,8 +23,8 @@ int InstructionMemory::getNumberOfInstructions()
     return this->numberOfInstructions;
 }
 
-//destrutor da classe
+
 InstructionMemory::~InstructionMemory()
 {
-    delete instructionMemory;
+   //Desalocar o vector
 }
