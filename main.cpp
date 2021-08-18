@@ -85,7 +85,7 @@ void TesteExtracaoBitwise()
   mips.extractRs(valTeste);
 
   Im->setInstruction(4, 8444);
-  cout << Im->getInstruction(4) << endl;
+  //cout << Im->getInstruction(4) << endl;
   cout << "Teste " << Im->getNumberOfInstructions() << endl;
 
   bitset<32> teste(-16);

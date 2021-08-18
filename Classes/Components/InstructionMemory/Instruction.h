@@ -53,7 +53,10 @@ public:
             this->address = mips.extractAddress(binaryValue);
         }
     }
-    ~Instruction();
+
+    Instruction(){}
+
+    ~Instruction(){}
 };
 
 #endif

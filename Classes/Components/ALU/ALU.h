@@ -1,7 +1,7 @@
 #ifndef ALU_H_INCLUDED
 #define ALU_H_INCLUDED
 #include <iostream>
-#include "../../Mips/Mips.h";
+#include "../../Mips/Mips.h"
 
 using namespace std;
 

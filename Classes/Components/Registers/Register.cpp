@@ -7,15 +7,9 @@ Register::Register(string name, int value)
     this->value = value;
 }
 
-//construtor da classe
-Register::Register()
-{
-}
+Register::Register(){}
 
-//destrutor da classe
-Register::~Register()
-{
-}
+Register::~Register(){}
 
 void Register::setName(string name)
 {
@@ -37,6 +31,3 @@ int Register::getValue()
     return this->value;
 }
 
-Register::~Register(){
-
-};

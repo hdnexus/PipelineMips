@@ -18,7 +18,6 @@ public:
   string getName();
   void setValue(int value);
   int getValue();
-  ~Register();
 };
 
 #endif

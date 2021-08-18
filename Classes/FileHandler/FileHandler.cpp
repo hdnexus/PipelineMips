@@ -32,4 +32,6 @@ vector<string> FileHandler::readFile(string filename)
 
    else
       cout << "Arquivo de texto não encontrdo";
+
+   return binaryLines;
 }

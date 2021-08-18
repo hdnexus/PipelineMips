@@ -1,12 +1,12 @@
 #include "./PipelineSimulator.h"
 
 //construtor da classe
-PipelineSimulator::PipelineSimulator(InstructionMemory *instructionMemory, DataMemory *dataMemory, Registers *bankOfRegisters)
+PipelineSimulator::PipelineSimulator(InstructionMemory *instructionMemory, DataMemory *dataMemory,Registers *bankOfRegisters)
 {
   this->pc.set(0);
   this->instructionMemory = instructionMemory;
   this->dataMemory = dataMemory;
-  this->bankOfRegisters = bankOfRegisters;
+  //this->bankOfRegisters = bankOfRegisters;
 }
 
 //destrutor da classe
@@ -24,7 +24,7 @@ void PipelineSimulator::startDirectSimulation()
     this->if_stage.execute(this->pc,*this->instructionMemory,&this->if_id); 
 
     if(clock > 1)    
-      this->id_stage.execute();
+      //this->id_stage.execute();
 
     //Faz o estagio IF
     /*
