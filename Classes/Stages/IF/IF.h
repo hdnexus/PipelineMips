@@ -10,14 +10,14 @@ using namespace std;
 class IF
 {
 private:
-  IF_ID if_id;
+  //IF_ID if_id;
 
 public:
   IF();
   ~IF();
-  void execute(PC pc, InstructionMemory Im);
-  int getCurrentInstruction();
-  int getCurrentPc();
+  void execute(PC pc, InstructionMemory Im, IF_ID *if_id);
+  /*  int getCurrentInstruction();
+  int getCurrentPc();*/
 };
 
 #endif
