@@ -21,43 +21,60 @@ int ALU::add(int a, int b)
   return a;
 }
 
+void ALU::setZero(bool value)
+{
+  this->zero = value;
+}
+
+bool ALU::getZero()
+{
+  return this->zero;
+}
+
 int ALU::ALUOperation(unsigned int input1, unsigned int input2)
 {
   string ALUControl = "Chamar função de ALUControl para pegar a operação";
-
+  int operationResult;
   if (ALUControl == "NOTR")
-    return input1 + input2;
+    operationResult = input1 + input2;
 
   else
   {
     if (ALUControl == "SLL")
     {
       int shamt = this->mips.extractShamt(input1);
-      return input1 << shamt;
-    }
-    else if (ALUControl == "JR")
-    {
-      //nao sei se ta certo isso aqui
+      operationResult = input1 << shamt;
     }
     else if (ALUControl == "ADD")
     {
-      return input1 + input2;
+      operationResult = input1 + input2;
     }
     else if (ALUControl == "SUB")
     {
-      return input1 - input2;
+      operationResult = input1 - input2;
     }
     else if (ALUControl == "AND")
     {
-      return (int)input1 & input2;
+      operationResult = input1 & input2;
     }
     else if (ALUControl == "OR")
     {
-      return (int)input1 | input2;
+      operationResult = input1 | input2;
     }
     else if (ALUControl == "SLT")
     {
-      return input1 < input2; //Não sei se essa operação esta certa
+      operationResult = input1 < input2;
     }
   }
+
+  if (operationResult == 0)
+  {
+    this->setZero(0);
+  }
+  else
+  {
+    this->setZero(1);
+  }
+
+  return operationResult;
 }

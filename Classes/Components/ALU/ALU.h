@@ -9,10 +9,13 @@ class ALU
 {
 private:
   Mips mips;
+  bool zero;
 
 public:
   ALU();
   ~ALU();
+  void setZero(bool value);
+  bool getZero();
   int ALUOperation(unsigned int input1, unsigned int input2);
   int add(int a, int b);
 };
