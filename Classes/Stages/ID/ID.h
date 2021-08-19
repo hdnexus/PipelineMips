@@ -6,6 +6,7 @@
 #include "../../Components/SignExtend/SignExtend.h"
 #include "../../Components/ControlSignals/ControlSignals.h"
 #include "../../Components/ID_EX/ID_EX.h"
+
 #include <bitset>
 
 using namespace std;

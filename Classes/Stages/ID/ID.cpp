@@ -3,6 +3,8 @@
 
 ID::ID(){}
 
+ID::~ID(){}
+
 void ID::execute(Instruction instruction,Registers *bankOfRegisters,ID_EX *id_ex){
     //bankOfRegisters
     ControlSignals controlSignal;
@@ -20,5 +22,3 @@ void ID::execute(Instruction instruction,Registers *bankOfRegisters,ID_EX *id_ex
     id_ex->rd2 = r2;
 
 }
-
-ID::~ID(){}

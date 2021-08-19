@@ -18,7 +18,7 @@ public:
     bitset<32> signExtend;
 
     ID_EX() {}
-    ID_EX() {}
+    ~ID_EX() {}
 };
 
 #endif
