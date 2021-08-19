@@ -10,6 +10,7 @@ private:
 public:
   MEM();
   ~MEM();
+  void execute();
 };
 
 #endif

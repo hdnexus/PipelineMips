@@ -16,7 +16,6 @@ Registers::Registers()
     this->registers[21] = *new Register("s5", 20);
     this->registers[22] = *new Register("s6", 19);
     this->registers[23] = *new Register("a2", 30);
-
 }
 
 //destrutor da classe

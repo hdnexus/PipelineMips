@@ -9,3 +9,7 @@ EX::EX()
 EX::~EX()
 {
 }
+
+void EX::execute()
+{
+}

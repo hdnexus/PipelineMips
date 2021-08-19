@@ -5,16 +5,15 @@
 
 using namespace std;
 
-
 class IF_ID
 {
 private:
     int pcIncremented;
     Instruction *instruction;
-    
+
 public:
-    IF_ID() {} 
-    ~IF_ID() {} 
+    IF_ID() {}
+    ~IF_ID() {}
     void setInstruction(Instruction instruction)
     {
         this->instruction = &instruction;

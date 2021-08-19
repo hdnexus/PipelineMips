@@ -10,23 +10,23 @@ ControlSignals::~ControlSignals()
 
 void ControlSignals::setControlSignals(int opcode, int funct)
 {
-  if (opcode == 0) //R format: add, sub, and, or, slt, sll - OK
+  if (opcode == 0) //Tipo R
   {
     if (funct == 8) //jr
     {
-      this->RegDst = 0;   // X - Don't care
-      this->ALUSrc = 0;   // X - Don't care
-      this->MemtoReg = 0; // X - Don't care
+      this->RegDst = 0;   // X - Não importa
+      this->ALUSrc = 0;   // X - Não importa
+      this->MemtoReg = 0; // X - Não importa
       this->RegWrite = 0;
-      this->MemRead = 0; // X - Don't care
+      this->MemRead = 0; // X - Não importa
       this->MemWrite = 0;
-      this->Branch = 0;         // X - Don't care
-      this->BranchNotEqual = 0; // X - Don't care
-      this->ALUOp1 = 1;         // X - Don't care. Deixei 1 porque é tipo R
-      this->ALUOp0 = 0;         // X - Don't care. Deixei 0 porque é tipo R
+      this->Branch = 0;         // X - Não importa
+      this->BranchNotEqual = 0; // X - Não importa
+      this->ALUOp1 = 1;         // X - Não importa. Deixei 1 porque é tipo R
+      this->ALUOp0 = 0;         // X - Não importa. Deixei 0 porque é tipo R
       this->Jump = 1;
     }
-    else
+    else //add, sub, and, or, slt, sll
     {
       this->RegDst = 1;
       this->ALUSrc = 0;
@@ -44,39 +44,39 @@ void ControlSignals::setControlSignals(int opcode, int funct)
 
   if (opcode == 2) //j
   {
-    this->RegDst = 0;   // X - Don't care
-    this->ALUSrc = 0;   // X - Don't care
-    this->MemtoReg = 0; // X - Don't care
+    this->RegDst = 0;   // X - Não importa
+    this->ALUSrc = 0;   // X - Não importa
+    this->MemtoReg = 0; // X - Não importa
     this->RegWrite = 0;
-    this->MemRead = 0; // X - Don't care
+    this->MemRead = 0; // X - Não importa
     this->MemWrite = 0;
     this->Branch = 0;
     this->BranchNotEqual = 0;
-    this->ALUOp1 = 0; // X - Don't care
-    this->ALUOp0 = 0; // X - Don't care
+    this->ALUOp1 = 0; // X - Não importa
+    this->ALUOp0 = 0; // X - Não importa
     this->Jump = 1;
   }
 
   if (opcode == 3) //jal
   {
-    this->RegDst = 0;   // X - Don't care
-    this->ALUSrc = 0;   // X - Don't care
-    this->MemtoReg = 0; // X - Don't care
+    this->RegDst = 0;   // X - Não importa
+    this->ALUSrc = 0;   // X - Não importa
+    this->MemtoReg = 0; // X - Não importa
     this->RegWrite = 1;
     this->MemRead = 0;
     this->MemWrite = 0;
     this->Branch = 0;
     this->BranchNotEqual = 0;
-    this->ALUOp1 = 0; // X - Don't care
-    this->ALUOp0 = 0; // X - Don't care
+    this->ALUOp1 = 0; // X - Não importa
+    this->ALUOp0 = 0; // X - Não importa
     this->Jump = 1;
   }
 
   if (opcode == 4) //beq - OK
   {
-    this->RegDst = 0; // X - Don't care
+    this->RegDst = 0; // X - Não importa
     this->ALUSrc = 0;
-    this->MemtoReg = 0; // X - Don't care
+    this->MemtoReg = 0; // X - Não importa
     this->RegWrite = 0;
     this->MemRead = 0;
     this->MemWrite = 0;
@@ -89,11 +89,11 @@ void ControlSignals::setControlSignals(int opcode, int funct)
 
   if (opcode == 5) //bne
   {
-    this->RegDst = 0; // X - Don't care
+    this->RegDst = 0; // X - Não importa
     this->ALUSrc = 0;
-    this->MemtoReg = 0; // X - Don't care
+    this->MemtoReg = 0; // X - Não importa
     this->RegWrite = 0;
-    this->MemRead = 0; // X - Don't care
+    this->MemRead = 0; // X - Não importa
     this->MemWrite = 0;
     this->Branch = 0;
     this->BranchNotEqual = 1;
@@ -134,9 +134,9 @@ void ControlSignals::setControlSignals(int opcode, int funct)
 
   if (opcode == 43) //sw - OK
   {
-    this->RegDst = 0; // X - Don't care
+    this->RegDst = 0; // X - Não importa
     this->ALUSrc = 1;
-    this->MemtoReg = 0; // X - Don't care
+    this->MemtoReg = 0; // X - Não importa
     this->RegWrite = 0;
     this->MemRead = 0;
     this->MemWrite = 1;

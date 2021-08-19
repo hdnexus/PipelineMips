@@ -10,6 +10,7 @@ private:
 public:
   WB();
   ~WB();
+  void execute();
 };
 
 #endif

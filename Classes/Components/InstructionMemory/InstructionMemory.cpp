@@ -6,7 +6,7 @@ InstructionMemory::InstructionMemory(int memorySize)
     this->instructionMemory.resize(memorySize);
 }
 
-void InstructionMemory::setInstruction(int index,  int instruction)
+void InstructionMemory::setInstruction(int index, int instruction)
 {
 
     this->instructionMemory[index / 4] = *new Instruction(instruction);
@@ -23,8 +23,7 @@ int InstructionMemory::getNumberOfInstructions()
     return this->numberOfInstructions;
 }
 
-
 InstructionMemory::~InstructionMemory()
 {
-   //Desalocar o vector
+    //Desalocar o vector
 }

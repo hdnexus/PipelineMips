@@ -6,7 +6,7 @@ IF::IF() {}
 //destrutor da classe
 IF::~IF() {}
 
-void IF::execute(PC pc, InstructionMemory instructionMemory,IF_ID *if_id)
+void IF::execute(PC pc, InstructionMemory instructionMemory, IF_ID *if_id)
 {
     if_id->setInstruction(instructionMemory.getInstruction(pc.get()));
     if_id->setPcIncremented(pc.get() + 4);

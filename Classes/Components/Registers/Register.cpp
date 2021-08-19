@@ -7,9 +7,9 @@ Register::Register(string name, int value)
     this->value = value;
 }
 
-Register::Register(){}
+Register::Register() {}
 
-Register::~Register(){}
+Register::~Register() {}
 
 void Register::setName(string name)
 {
@@ -30,4 +30,3 @@ int Register::getValue()
 {
     return this->value;
 }
-

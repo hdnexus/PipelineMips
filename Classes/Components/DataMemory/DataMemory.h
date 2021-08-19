@@ -7,12 +7,13 @@ using namespace std;
 class DataMemory
 {
 private:
-  int* memory;
+  int *memory;
+
 public:
   DataMemory();
   ~DataMemory();
   void write(int positon, int value);
-  int  get(int position);
+  int get(int position);
 };
 
 #endif

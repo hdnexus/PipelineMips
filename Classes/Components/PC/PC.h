@@ -10,12 +10,14 @@ private:
   int instructionAddrress;
 
 public:
-  PC(){}
-  ~PC(){}
-  int get(){
+  PC() {}
+  ~PC() {}
+  int get()
+  {
     return this->instructionAddrress;
   }
-  void set(int address){
+  void set(int address)
+  {
     this->instructionAddrress = address;
   }
 };

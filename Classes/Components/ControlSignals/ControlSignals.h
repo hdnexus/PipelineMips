@@ -23,7 +23,7 @@ public:
   ControlSignals();
   ~ControlSignals();
 
-  void setControlSignals(int opcode,int funct);
+  void setControlSignals(int opcode, int funct);
 };
 
 #endif

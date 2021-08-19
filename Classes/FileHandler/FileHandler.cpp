@@ -40,7 +40,6 @@ vector<int> FileHandler::readMemDadosTxt(string filename)
 {
    string filePathDefault = "./inputs/memDados.txt";
 
-
    vector<int> memValue;
 
    ifstream arq(filePathDefault);
@@ -64,4 +63,3 @@ vector<int> FileHandler::readMemDadosTxt(string filename)
 
    return memValue;
 }
-

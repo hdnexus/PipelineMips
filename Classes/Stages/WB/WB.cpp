@@ -9,3 +9,7 @@ WB::WB()
 WB::~WB()
 {
 }
+
+void WB::execute()
+{
+}

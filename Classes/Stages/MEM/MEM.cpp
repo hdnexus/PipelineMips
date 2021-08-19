@@ -9,3 +9,7 @@ MEM::MEM()
 MEM::~MEM()
 {
 }
+
+void MEM::execute()
+{
+}

@@ -10,6 +10,7 @@ private:
 public:
   EX();
   ~EX();
+  void execute();
 };
 
 #endif
