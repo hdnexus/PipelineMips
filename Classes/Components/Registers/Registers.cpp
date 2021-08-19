@@ -8,10 +8,15 @@ Registers::Registers()
     this->registers[0].setName("zero");
     this->registers[0].setValue(0);
 
-    //-1 é uma flag que o registrador está vazio
-    this->registers[4] = *new Register("a0",-1);
-    this->registers[5] = *new Register("a1",-1);
-    this->registers[5] = *new Register("a1",-1);
+    this->registers[16] = *new Register("s0", 6);
+    this->registers[17] = *new Register("s1", 5);
+    this->registers[18] = *new Register("s2", 1);
+    this->registers[19] = *new Register("s3", 22);
+    this->registers[20] = *new Register("s4", 21);
+    this->registers[21] = *new Register("s5", 20);
+    this->registers[22] = *new Register("s6", 19);
+    this->registers[23] = *new Register("a2", 30);
+
 }
 
 //destrutor da classe
