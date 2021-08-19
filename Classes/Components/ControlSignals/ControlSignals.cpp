@@ -8,7 +8,7 @@ ControlSignals::~ControlSignals()
 {
 }
 
-void ControlSignals::setControlSignals(unsigned int opcode, unsigned int funct)
+void ControlSignals::setControlSignals(int opcode, int funct)
 {
   if (opcode == 0) //R format: add, sub, and, or, slt, sll - OK
   {

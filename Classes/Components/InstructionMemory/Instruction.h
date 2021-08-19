@@ -8,17 +8,17 @@ using namespace std;
 class Instruction
 {
 private:
-    char type;
-    int funct;
-    int opcode;
-    int immediate;
-    int shamt;
-    int address;
-    int rs;
-    int rt;
-    int rd;
-
 public:
+    char type;
+    int funct = -1;
+    int opcode = -1;
+    int immediate = -1;
+    int shamt = -1;
+    int address = -1;
+    int rs = -1;
+    int rt = -1;
+    int rd = -1;
+
     Instruction(int binaryValue)
     {
         Mips mips;
@@ -54,9 +54,9 @@ public:
         }
     }
 
-    Instruction(){}
+    Instruction() {}
 
-    ~Instruction(){}
+    ~Instruction() {}
 };
 
 #endif
