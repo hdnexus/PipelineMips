@@ -13,6 +13,7 @@ public:
   FileHandler();
   ~FileHandler();
   vector<string> readFile(string filename);
+  vector<int> readMemDadosTxt(string filename);
 };
 
 #endif

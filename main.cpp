@@ -13,13 +13,14 @@
 
 using namespace std;
 
-void testeAlu(){
+void testeAlu()
+{
   ALU alu;
   IF_ID teste;
   teste.setPcIncremented(2);
   cout << teste.getPcIncremented() << endl;
-  cout << alu.add(1,3) << endl;
-  cout << alu.add(-1,-5) << endl;
+  cout << alu.add(1, 3) << endl;
+  cout << alu.add(-1, -5) << endl;
 }
 
 void insereValTestesBe()
@@ -94,9 +95,19 @@ void TesteExtracaoBitwise()
   cout << "Teste bitwise -4 :  " << teste2 << endl;
 }
 
+
+void inicializaMemoriaDeDados(){
+  
+}
+
 int main(int argc, char *argv[])
 {
   testeAlu();
+  Registers bankOfRegisters;
+  bankOfRegisters.printRegisters();
+  FileHandler fileHandlerInstance;
+
+  fileHandlerInstance.readMemDadosTxt("teste");
   //insereValTestesBe();
   /*
   menu();

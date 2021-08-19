@@ -35,3 +35,33 @@ vector<string> FileHandler::readFile(string filename)
 
    return binaryLines;
 }
+
+vector<int> FileHandler::readMemDadosTxt(string filename)
+{
+   string filePathDefault = "./inputs/memDados.txt";
+
+
+   vector<int> memValue;
+
+   ifstream arq(filePathDefault);
+
+   string linha;
+   if (arq.is_open())
+   {
+      while (!arq.eof())
+      {
+         getline(arq, linha);
+         cout << "Linha : " << linha << endl;
+         memValue.push_back(stoi(linha));
+      }
+
+      arq.close();
+      return memValue;
+   }
+
+   else
+      cout << "Arquivo de texto não encontrdo";
+
+   return memValue;
+}
+

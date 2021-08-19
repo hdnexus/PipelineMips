@@ -60,5 +60,5 @@ void Registers::printRegisters()
 {
     cout << "Imprimindo banco de registradores" << endl;
     for (int i = 0; i < this->registers.size(); i++)
-        cout << this->registers[i].getName() << endl;
+        cout << this->registers[i].getName() << " : " << this->registers[i].getValue() << endl;
 }
