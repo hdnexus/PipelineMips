@@ -42,7 +42,7 @@ int ALU::ALUOperation(unsigned int input1, unsigned int input2)
   {
     if (ALUControl == "SLL")
     {
-      int shamt = this->mips.extractShamt(input1);
+      int shamt = this->mips.extractShamt(input1); //nao sei se ta certo isso aq
       operationResult = input1 << shamt;
     }
     else if (ALUControl == "ADD")

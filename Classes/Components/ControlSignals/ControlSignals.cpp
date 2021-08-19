@@ -12,7 +12,7 @@ void ControlSignals::setControlSignals(int opcode, int funct)
 {
   if (opcode == 0) //R format: add, sub, and, or, slt, sll - OK
   {
-    if (funct == 8)
+    if (funct == 8) //jr
     {
       this->RegDst = 0;   // X - Don't care
       this->ALUSrc = 0;   // X - Don't care
