@@ -36,6 +36,12 @@ string ALUControl::Output(unsigned int funct)
     else if (funct == 42)
       return "SLT";
   }
-
-  return "NOTR"; //MUDAR ISSO
+  else if (*ALUOp1 == false and *ALUOp0 == false)
+  {
+    return "LWandSW";
+  }
+  else if (*ALUOp1 == false and *ALUOp0 == true)
+  {
+    return "BranchType";
+  }
 }

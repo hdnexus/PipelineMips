@@ -35,9 +35,15 @@ int ALU::ALUOperation(unsigned int input1, unsigned int input2)
 {
   string ALUControl = "Chamar função de ALUControl para pegar a operação";
   int operationResult;
-  if (ALUControl == "NOTR")
-    operationResult = input1 + input2;
 
+  if (ALUControl == "LWandSW")
+  {
+    operationResult = input1 + input2;
+  }
+  else if (ALUControl == "BranchType")
+  {
+    operationResult = input1 - input2;
+  }
   else
   {
     if (ALUControl == "SLL")
