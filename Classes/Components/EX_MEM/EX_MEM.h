@@ -13,9 +13,9 @@ class EX_MEM
 private:
 public:
   ControlSignals controlSignal; //Acho que ta OK
-  int shamt, funct;             //Não seria melhor a instrução?
+  Instruction *instruction;        //Não seria melhor a instrução?
   Register rd2;
-  bool branchZero;         //Acho que ta OK
+  bool aluZero;         //Acho que ta OK
   int pcBranchIncremented; //Acho que ta OK
   //////Precisamos do resultado da alu aqui
   //////Precisamos do write register index aqui

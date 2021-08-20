@@ -20,7 +20,8 @@ bool ALU::getZero()
 
 int ALU::ALUOperation(int input1, int input2)
 {
-  string ALUControl = "Chamar função de ALUControl para pegar a operação";
+  ALUControl aluC;
+  string ALUControl = aluC
   int operationResult;
 
   if (ALUControl == "LWandSW")

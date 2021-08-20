@@ -6,7 +6,7 @@ ALUControl::ALUControl()
   this->ALUOp0 = 0;
 }
 
-void ALUControl::SetALU(bool *ALUOp1, bool *ALUOp0)
+void ALUControl::SetALU(bool ALUOp1, bool ALUOp0)
 {
   this->ALUOp1 = ALUOp1;
   this->ALUOp0 = ALUOp0;
@@ -14,9 +14,7 @@ void ALUControl::SetALU(bool *ALUOp1, bool *ALUOp0)
 
 string ALUControl::Output(int funct)
 {
-  string instruction;
-
-  if (*ALUOp1 == true and *ALUOp0 == false)
+  if (ALUOp1 == true and ALUOp0 == false)
   {
     if (funct == 0)
       return "SLL";
@@ -36,11 +34,11 @@ string ALUControl::Output(int funct)
     else if (funct == 42)
       return "SLT";
   }
-  else if (*ALUOp1 == false and *ALUOp0 == false)
+  else if (ALUOp1 == false and ALUOp0 == false)
   {
     return "LWandSW";
   }
-  else if (*ALUOp1 == false and *ALUOp0 == true)
+  else if (ALUOp1 == false and ALUOp0 == true)
   {
     return "BranchType";
   }

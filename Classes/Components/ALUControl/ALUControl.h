@@ -7,13 +7,13 @@ using namespace std;
 class ALUControl
 {
 private:
-  bool *ALUOp1;
-  bool *ALUOp0;
+  bool ALUOp1;
+  bool ALUOp0;
 
 public:
   ALUControl();
   string Output(int funct);
-  void SetALU(bool *ALUOp1, bool *ALUOp0);
+  void SetALU(bool ALUOp1, bool ALUOp0);
 };
 
 #endif

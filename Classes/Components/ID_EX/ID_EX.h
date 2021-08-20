@@ -13,8 +13,8 @@ class ID_EX
 private:
 public:
     ControlSignals controlSignal;
-    int shamt, funct;
     Register rd1, rd2;
+    Instruction *instruction;
     bitset<32> signExtend;
     int pcIncremented;
 

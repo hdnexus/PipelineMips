@@ -2,6 +2,7 @@
 #define ALU_H_INCLUDED
 #include <iostream>
 #include "../../Mips/Mips.h"
+#include "../ALUControl/ALUControl.h"
 
 using namespace std;
 

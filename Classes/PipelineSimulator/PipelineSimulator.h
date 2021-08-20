@@ -2,6 +2,7 @@
 #define PIPELINESIMULATOR_H_INCLUDED
 #include <iostream>
 #include "../Components/IF_ID/IF_ID.h"
+#include "../Components/ID_EX/ID_EX.h"
 #include "../Components/PC/PC.h"
 #include "../Stages/IF/IF.h"
 #include "../Stages/ID/ID.h"
@@ -19,6 +20,7 @@ class PipelineSimulator
 
 private:
   IF_ID if_id;
+  ID_EX id_ex;
   IF if_stage;
   ID id_stage;
   EX ex_stage;
