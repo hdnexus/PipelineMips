@@ -25,27 +25,27 @@ void PipelineSimulator::startDirectSimulation()
     if (clock >= 5)
     {
       //this->wb_stage.execute();
-      //printInformation(clock, instrução, etc...); //printa informações do clock
+      //printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     }
     if (clock >= 4)
     {
       //this->mem_stage.execute();
-      //printInformation(clock, instrução, etc...); //printa informações do clock
+      //printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     }
     if (clock >= 3)
     {
       //this->ex_stage.execute();
-      //printInformation(clock, instrução, etc...); //printa informações do clock
+      //printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     }
     if (clock >= 2)
     {
       //this->id_stage.execute();
-      //printInformation(clock, instrução, etc...); //printa informações do clock
+      //printInformation(clock, instrução, estagio, estagio, etc...); //printa informações do clock
     }
     if (clock >= 1)
     {
       this->if_stage.execute(this->pc, *this->instructionMemory, &this->if_id);
-      //printInformation(clock, instrução, etc...); //printa informações do clock
+      //printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     }
     clock++;
   }
@@ -59,22 +59,22 @@ void PipelineSimulator::startStepSimulation()
   {
     IF.doIF(); //Faz o estagio IF
     clock++;
-    printInformation(clock, instrução, etc...); //printa informações do clock
+    printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     
     apertar botão para continuar
     ID.doID(); //Faz o estagio ID
     clock++;
-    printInformation(clock, instrução, etc...); //printa informações do clock
+    printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     
     apertar botão para continuar
     EX.doEX(); //Faz o estagio EX
     clock++;
-    printInformation(clock, instrução, etc...); //printa informações do clock
+    printInformation(clock, instrução, estagio, etc...); //printa informações do clock
     
     apertar botão para continuar
     MEM.doMEM(); //Faz o estagio MEM
     clock++;
-    printInformation(clock, instrução, etc...); //printa informações do clock
+    printInformation(clock, instrução, estagio, etc...); //printa informações do clock
   
     apertar botão para continuar
     WB.doWB(); //Faz o estagio WB 
