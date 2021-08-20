@@ -14,13 +14,13 @@ private:
 public:
   Mips();
   ~Mips();
-  unsigned int getOpcodeValue(int binaryValue);
-  unsigned int extractRs(int value);
-  unsigned int extractRt(int value);
-  unsigned int extractRd(int value);
-  unsigned int extractShamt(int value);
-  unsigned int extractFunct(int value);
-  unsigned int extractAddress(int value);
+  int getOpcodeValue(int binaryValue);
+  int extractRs(int value);
+  int extractRt(int value);
+  int extractRd(int value);
+  int extractShamt(int value);
+  int extractFunct(int value);
+  int extractAddress(int value);
   int extractImmediate(int value);
 };
 

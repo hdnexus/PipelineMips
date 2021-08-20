@@ -12,7 +12,7 @@ void ALUControl::SetALU(bool *ALUOp1, bool *ALUOp0)
   this->ALUOp0 = ALUOp0;
 }
 
-string ALUControl::Output(unsigned int funct)
+string ALUControl::Output(int funct)
 {
   string instruction;
 

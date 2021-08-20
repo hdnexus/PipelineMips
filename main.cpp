@@ -19,8 +19,6 @@ void testeAlu()
   IF_ID teste;
   teste.setPcIncremented(2);
   cout << teste.getPcIncremented() << endl;
-  cout << alu.add(1, 3) << endl;
-  cout << alu.add(-1, -5) << endl;
 }
 
 void insereValTestesBe()
@@ -77,7 +75,7 @@ void TesteExtracaoBitwise()
   Util util;
   InstructionMemory *Im = new InstructionMemory(100);
 
-  unsigned int valTeste = 577372292;
+  int valTeste = 577372292;
 
   mips.extractFunct(valTeste);
   mips.extractShamt(valTeste);
@@ -95,9 +93,8 @@ void TesteExtracaoBitwise()
   cout << "Teste bitwise -4 :  " << teste2 << endl;
 }
 
-
-void inicializaMemoriaDeDados(){
-  
+void inicializaMemoriaDeDados()
+{
 }
 
 int main(int argc, char *argv[])

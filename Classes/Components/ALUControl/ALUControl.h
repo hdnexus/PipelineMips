@@ -12,7 +12,7 @@ private:
 
 public:
   ALUControl();
-  string Output(unsigned int funct);
+  string Output(int funct);
   void SetALU(bool *ALUOp1, bool *ALUOp0);
 };
 

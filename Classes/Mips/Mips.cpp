@@ -10,12 +10,12 @@ Mips::~Mips()
 {
 }
 
-unsigned int Mips::getOpcodeValue(int binaryValue)
+int Mips::getOpcodeValue(int binaryValue)
 {
    return binaryValue >> 26;
 }
 
-unsigned int Mips::extractFunct(int value)
+int Mips::extractFunct(int value)
 {
    bitset<32> binary(value);
    bitset<6> funct;
@@ -32,7 +32,7 @@ unsigned int Mips::extractFunct(int value)
    return funct.to_ulong();
 }
 
-unsigned int Mips::extractShamt(int value)
+int Mips::extractShamt(int value)
 {
    bitset<32> binary(value);
 
@@ -50,7 +50,7 @@ unsigned int Mips::extractShamt(int value)
    return shamt.to_ulong();
 }
 
-unsigned int Mips::extractRd(int value)
+int Mips::extractRd(int value)
 {
    bitset<32> binary(value);
 
@@ -68,7 +68,7 @@ unsigned int Mips::extractRd(int value)
    return rd.to_ulong();
 }
 
-unsigned int Mips::extractRt(int value)
+int Mips::extractRt(int value)
 {
    bitset<32> binary(value);
 
@@ -86,7 +86,7 @@ unsigned int Mips::extractRt(int value)
    return rt.to_ulong();
 }
 
-unsigned int Mips::extractRs(int value)
+int Mips::extractRs(int value)
 {
    bitset<32> binary(value);
 
@@ -104,7 +104,7 @@ unsigned int Mips::extractRs(int value)
    return rs.to_ulong();
 }
 
-unsigned int Mips::extractAddress(int value)
+int Mips::extractAddress(int value)
 {
    bitset<32> binary(value);
 

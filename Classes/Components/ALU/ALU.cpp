@@ -8,19 +8,6 @@ ALU::~ALU()
 {
 }
 
-int ALU::add(int a, int b)
-{
-
-  unsigned carry;
-  while (b != 0)
-  {
-    carry = a & b;
-    a = a ^ b;
-    b = carry << 1;
-  }
-  return a;
-}
-
 void ALU::setZero(bool value)
 {
   this->zero = value;
@@ -31,7 +18,7 @@ bool ALU::getZero()
   return this->zero;
 }
 
-int ALU::ALUOperation(unsigned int input1, unsigned int input2)
+int ALU::ALUOperation(int input1, int input2)
 {
   string ALUControl = "Chamar função de ALUControl para pegar a operação";
   int operationResult;

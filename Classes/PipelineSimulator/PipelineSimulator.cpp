@@ -17,32 +17,32 @@ void PipelineSimulator::startDirectSimulation()
 {
 
   InstructionMemory *IM = new InstructionMemory(32);
-  int clock = 0;
+  int clock = 1;
 
   while (this->pc.get() < 128)
   {
 
-    if (clock >= 4)
+    if (clock >= 5)
     {
       //this->wb_stage.execute();
       //printInformation(clock, instrução, etc...); //printa informações do clock
     }
-    if (clock >= 3)
+    if (clock >= 4)
     {
       //this->mem_stage.execute();
       //printInformation(clock, instrução, etc...); //printa informações do clock
     }
-    if (clock >= 2)
+    if (clock >= 3)
     {
       //this->ex_stage.execute();
       //printInformation(clock, instrução, etc...); //printa informações do clock
     }
-    if (clock >= 1)
+    if (clock >= 2)
     {
       //this->id_stage.execute();
       //printInformation(clock, instrução, etc...); //printa informações do clock
     }
-    if (clock >= 0)
+    if (clock >= 1)
     {
       this->if_stage.execute(this->pc, *this->instructionMemory, &this->if_id);
       //printInformation(clock, instrução, etc...); //printa informações do clock

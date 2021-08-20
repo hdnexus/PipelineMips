@@ -10,7 +10,7 @@ private:
 public:
   ADD();
   ~ADD();
-  unsigned int addOperation(unsigned int input1, unsigned int input2);
+  int addOperation(int input1, int input2);
 };
 
 #endif

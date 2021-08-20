@@ -16,8 +16,7 @@ public:
   ~ALU();
   void setZero(bool value);
   bool getZero();
-  int ALUOperation(unsigned int input1, unsigned int input2);
-  int add(int a, int b);
+  int ALUOperation(int input1, int input2);
 };
 
 #endif

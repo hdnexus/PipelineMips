@@ -10,9 +10,11 @@ ADD::~ADD()
 {
 }
 
-unsigned int ADD::addOperation(unsigned int input1, unsigned int input2)
+//Função para a operação que é feita no componente de add
+//Recebe como input dois valores, e retorna a soma desses valores
+int ADD::addOperation(int input1, int input2)
 {
-  unsigned int output;
+  int output;
   output = input1 + input2;
   return output;
 }
