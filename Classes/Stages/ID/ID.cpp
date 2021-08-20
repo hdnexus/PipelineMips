@@ -4,7 +4,7 @@ ID::ID() {}
 
 ID::~ID() {}
 
-void ID::execute(Instruction instruction, Registers *bankOfRegisters, ID_EX *id_ex,int pcIncremented)
+void ID::execute(Instruction instruction, Registers *bankOfRegisters, ID_EX *id_ex, int pcIncremented)
 {
     //bankOfRegisters
     ControlSignals controlSignal;

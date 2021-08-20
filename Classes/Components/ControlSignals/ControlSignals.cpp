@@ -1,13 +1,16 @@
 #include "ControlSignals.h"
 
+//destrutor da classe
 ControlSignals::ControlSignals()
 {
 }
 
+//construtor da classe
 ControlSignals::~ControlSignals()
 {
 }
 
+//Função para setar os controles sinais com o input do opcode e do funct da instrução
 void ControlSignals::setControlSignals(int opcode, int funct)
 {
   if (opcode == 0) //Tipo R

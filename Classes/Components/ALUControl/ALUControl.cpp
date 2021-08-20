@@ -1,20 +1,20 @@
 #include "ALUControl.h"
 
+//construtor da classe
 ALUControl::ALUControl()
 {
-  this->ALUOp1 = 0;
-  this->ALUOp0 = 0;
 }
 
-void ALUControl::SetALU(bool ALUOp1, bool ALUOp0)
+//destrutor da classe
+ALUControl::~ALUControl()
 {
-  this->ALUOp1 = ALUOp1;
-  this->ALUOp0 = ALUOp0;
 }
 
-string ALUControl::Output(int funct)
+//função realizada pelo ALUControl que é feita
+//para obter o tipo de operação que será realizada na ALU
+string ALUControl::Output(int funct, bool ALUOp1, bool ALUOp0)
 {
-  if (ALUOp1 == true and ALUOp0 == false)
+  if (ALUOp1 == true and ALUOp0 == false) //para operações de tipo R
   {
     if (funct == 0)
       return "SLL";
@@ -34,11 +34,11 @@ string ALUControl::Output(int funct)
     else if (funct == 42)
       return "SLT";
   }
-  else if (ALUOp1 == false and ALUOp0 == false)
+  else if (ALUOp1 == false and ALUOp0 == false) //para load word e store word
   {
     return "LWandSW";
   }
-  else if (ALUOp1 == false and ALUOp0 == true)
+  else if (ALUOp1 == false and ALUOp0 == true) //para branch equal e branch not equal
   {
     return "BranchType";
   }

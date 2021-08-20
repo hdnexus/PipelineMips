@@ -15,9 +15,10 @@ class ID
 {
 private:
   SignExtend signExtend;
+
 public:
   ID();
-  void execute(Instruction instruction,Registers *bankOfRegisters,ID_EX *id_ex,int pcIncremented);
+  void execute(Instruction instruction, Registers *bankOfRegisters, ID_EX *id_ex, int pcIncremented);
   ~ID();
 };
 

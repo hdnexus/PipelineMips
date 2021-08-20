@@ -39,7 +39,7 @@ void PipelineSimulator::startDirectSimulation()
     }
     if (clock >= 2)
     {
-      this->id_stage.execute(this->if_id.getIstruction(),this->bankOfRegisters,&this->id_ex,this->if_id.getPcIncremented());
+      this->id_stage.execute(this->if_id.getIstruction(), this->bankOfRegisters, &this->id_ex, this->if_id.getPcIncremented());
       //printInformation(clock, instrução, estagio, estagio, etc...); //printa informações do clock
     }
     if (clock >= 1)

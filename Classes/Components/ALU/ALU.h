@@ -9,15 +9,15 @@ using namespace std;
 class ALU
 {
 private:
-  Mips mips;
-  bool zero;
+  Mips mips; //Instruções
+  bool zero; //bool zero utilizado para casos de branch
 
 public:
   ALU();
   ~ALU();
   void setZero(bool value);
   bool getZero();
-  int ALUOperation(int input1, int input2);
+  int ALUOperation(int input1, int input2, string ALUControl);
 };
 
 #endif

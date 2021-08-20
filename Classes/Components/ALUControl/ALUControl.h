@@ -7,13 +7,13 @@ using namespace std;
 class ALUControl
 {
 private:
-  bool ALUOp1;
-  bool ALUOp0;
+  bool ALUOp1; //controle de sinal ALUOp1
+  bool ALUOp0; //controle de sinal ALUOp0
 
 public:
-  ALUControl();
-  string Output(int funct);
-  void SetALU(bool ALUOp1, bool ALUOp0);
+  ALUControl();                                       //construtor da classe
+  ~ALUControl();                                      //destrutor da classe
+  string Output(int funct, bool ALUOp1, bool ALUOp0); //operação do ALUControl
 };
 
 #endif

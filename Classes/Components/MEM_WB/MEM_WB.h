@@ -12,11 +12,11 @@ class MEM_WB
 {
 private:
 public:
-  ControlSignals controlSignal; //Acho que ta OK
-  int shamt, funct;             //Não seria melhor a instrução?
-  //////Precisamos do resultado da alu aqui
-  //////Precisamos do read data do componente de data memory
-  //////Precisamos do write register index
+  ControlSignals controlSignal;
+  Instruction *instruction;
+  int aluResult;
+  int readData;
+  int wrIndex;
 
   MEM_WB() {}
   ~MEM_WB() {}

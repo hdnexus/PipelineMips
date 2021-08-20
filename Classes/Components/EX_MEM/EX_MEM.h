@@ -12,13 +12,13 @@ class EX_MEM
 {
 private:
 public:
-  ControlSignals controlSignal; //Acho que ta OK
-  Instruction *instruction;        //Não seria melhor a instrução?
+  ControlSignals controlSignal;
+  Instruction *instruction;
   Register rd2;
-  bool aluZero;         //Acho que ta OK
-  int pcBranchIncremented; //Acho que ta OK
-  //////Precisamos do resultado da alu aqui
-  //////Precisamos do write register index aqui
+  bool aluZero;
+  int pcBranchIncremented;
+  int aluResult;
+  int wrIndex;
 
   EX_MEM() {}
   ~EX_MEM() {}
