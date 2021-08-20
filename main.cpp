@@ -10,31 +10,9 @@
 #include "Classes/Components/Registers/Registers.h"
 #include "Classes/Components/ALU/ALU.h"
 #include "Classes/Components/IF_ID/IF_ID.h"
+#include "Classes/Components/DataMemory/DataMemory.h"
 
 using namespace std;
-
-void testeAlu()
-{
-  ALU alu;
-  IF_ID teste;
-  teste.setPcIncremented(2);
-  cout << teste.getPcIncremented() << endl;
-}
-
-void insereValTestesBe()
-{
-  Registers bankOfRegisters;
-
-  bankOfRegisters.writeRegister(1, 0, "zero", 1);
-  bankOfRegisters.writeRegister(2, 10, "t0", 1);
-  bankOfRegisters.writeRegister(3, 5, "t1", 1);
-  bankOfRegisters.writeRegister(4, 6, "t2", 1);
-  bankOfRegisters.writeRegister(5, 7, "t3", 1);
-  bankOfRegisters.writeRegister(6, 8, "t4", 1);
-  bankOfRegisters.writeRegister(7, 9, "t5", 1);
-
-  bankOfRegisters.printRegisters();
-}
 
 void menu()
 {
@@ -68,43 +46,30 @@ void leArquivoTexto(string filename)
 {
 }
 
-void TesteExtracaoBitwise()
+void inicializaMemoriaDeDados(DataMemory *dataMemory)
 {
-  FileHandler fileHandler;
-  Mips mips;
-  Util util;
-  InstructionMemory *Im = new InstructionMemory(100);
+  FileHandler fileHandlerInstance;
+  vector<int> data =   fileHandlerInstance.readMemDadosTxt("teste");
 
-  int valTeste = 577372292;
+  for(int i = 0 ; i < data.size() ; i ++) 
+    dataMemory->write(i + 4,data.at(i));
 
-  mips.extractFunct(valTeste);
-  mips.extractShamt(valTeste);
-  mips.extractRt(valTeste);
-  mips.extractRd(valTeste);
-  mips.extractRs(valTeste);
-
-  Im->setInstruction(4, 8444);
-  //cout << Im->getInstruction(4) << endl;
-  cout << "Teste " << Im->getNumberOfInstructions() << endl;
-
-  bitset<32> teste(-16);
-  bitset<32> teste2(-4);
-  cout << "Teste bitwise -16 :  " << teste << endl;
-  cout << "Teste bitwise -4 :  " << teste2 << endl;
-}
-
-void inicializaMemoriaDeDados()
-{
+  //Imprime a memória de dados, a saída fica salva no txt "dataMemoryOut.txt"
+  dataMemory->printDataMemory();
 }
 
 int main(int argc, char *argv[])
 {
-  testeAlu();
+  DataMemory *dataMemory = new DataMemory();
+  dataMemory->write(1,2);
+  inicializaMemoriaDeDados(dataMemory);
   Registers bankOfRegisters;
   bankOfRegisters.printRegisters();
-  FileHandler fileHandlerInstance;
+  InstructionMemory *im = new InstructionMemory(32);
 
-  fileHandlerInstance.readMemDadosTxt("teste");
+  //Salva o que foi armazenado na memoria de instruções no txt 
+  im->initializeInstructionMemory();
+
   //insereValTestesBe();
   /*
   menu();
@@ -155,4 +120,31 @@ int main(int argc, char *argv[])
   cout << "Shamt 2 : " << mips.extractShamt(577372292) << endl;
 
 
+*/
+
+/*
+void TesteExtracaoBitwise()
+{
+  FileHandler fileHandler;
+  Mips mips;
+  Util util;
+  InstructionMemory *Im = new InstructionMemory(100);
+
+  int valTeste = 577372292;
+
+  mips.extractFunct(valTeste);
+  mips.extractShamt(valTeste);
+  mips.extractRt(valTeste);
+  mips.extractRd(valTeste);
+  mips.extractRs(valTeste);
+
+  Im->setInstruction(4, 8444);
+  //cout << Im->getInstruction(4) << endl;
+  cout << "Teste " << Im->getNumberOfInstructions() << endl;
+
+  bitset<32> teste(-16);
+  bitset<32> teste2(-4);
+  cout << "Teste bitwise -16 :  " << teste << endl;
+  cout << "Teste bitwise -4 :  " << teste2 << endl;
+}
 */

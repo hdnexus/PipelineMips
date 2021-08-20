@@ -1,0 +1,25 @@
+Imprimindo mem de dados : 
+Posição : 0 - Valor : 2
+Posição : 1 - Valor : 4
+Posição : 2 - Valor : 32
+Posição : 3 - Valor : 0
+Posição : 4 - Valor : 2
+Posição : 5 - Valor : 3490431
+Posição : 6 - Valor : 1
+Posição : 7 - Valor : 0
+Posição : 8 - Valor : 0
+Posição : 9 - Valor : 0
+Posição : 10 - Valor : 0
+Posição : 11 - Valor : 0
+Posição : 12 - Valor : 0
+Posição : 13 - Valor : 0
+Posição : 14 - Valor : 0
+Posição : 15 - Valor : 0
+Posição : 16 - Valor : 0
+Posição : 17 - Valor : 0
+Posição : 18 - Valor : 0
+Posição : 19 - Valor : 0
+Posição : 20 - Valor : 0
+Posição : 21 - Valor : 0
+Posição : 22 - Valor : 0
+Posição : 23 - Valor : 0

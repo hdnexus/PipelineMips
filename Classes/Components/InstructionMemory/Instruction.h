@@ -30,6 +30,8 @@ public:
             this->type = 'J';
         else if (opcode == 4 || opcode == 5 || opcode == 8 || opcode == 35 || opcode == 43)
             this->type = 'I';
+        else
+            this->type = 'U';
 
         if (this->type == 'R')
         {

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include "../Util/Util.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ public:
   ~FileHandler();
   vector<string> readFile(string filename);
   vector<int> readMemDadosTxt(string filename);
+  vector<int> readMemInstrucoesTxt();
 };
 
 #endif
