@@ -3,6 +3,7 @@
 #include <iostream>
 #include "../../Mips/Mips.h"
 #include "../ALUControl/ALUControl.h"
+#include "../InstructionMemory/Instruction.h"
 
 using namespace std;
 
@@ -17,7 +18,7 @@ public:
   ~ALU();
   void setZero(bool value);
   bool getZero();
-  int ALUOperation(/*int instruction,*/ int input1, int input2, string ALUControl);
+  int ALUOperation(Instruction instruction, int input1, int input2, string ALUControl);
 };
 
 #endif

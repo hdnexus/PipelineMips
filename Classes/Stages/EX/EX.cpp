@@ -18,16 +18,16 @@ void EX::execute(ID_EX id_ex)
 
   ///Parte para pegar o resultado da operação da ALU////////////////////
   string AluControl;
-  //ALUControl = AluControl.Output(instrução.funct,id_ex.controlSignal.AluOp1, id_ex.controlSignal.AluOp0)
+  AluControl =  this->aluControl.Output(id_ex.instruction->funct,id_ex.controlSignal.ALUOp1, id_ex.controlSignal.ALUOp0);
   int aluSrc = id_ex.controlSignal.ALUSrc; //responsavel por decidir qual valor vai ser utilizado como input na ALU
   int aluResult;                           //valor do resultado da ALU
   if (aluSrc == 1)                         //Usaremos o segundo input como o immediate extendido
   {
-    aluResult = this->alu.ALUOperation(/*id_ex.instruction.getValue(),*/ id_ex.rd1.getValue(), util.binaryStringToInt(id_ex.signExtend.to_string()), AluControl);
+    aluResult = this->alu.ALUOperation(*id_ex.instruction, id_ex.rd1.getValue(), util.binaryStringToInt(id_ex.signExtend.to_string()), AluControl);
   }
   else if (aluSrc == 0) //Usaremos o segundo input como o read data 2
   {
-    aluResult = this->alu.ALUOperation(/*id_ex.instruction.getValue(),*/ id_ex.rd1.getValue(), id_ex.rd2.getValue(), AluControl);
+    aluResult = this->alu.ALUOperation(*id_ex.instruction, id_ex.rd1.getValue(), id_ex.rd2.getValue(), AluControl);
   }
 
   ////////////////////////////////////////////////////////////////////

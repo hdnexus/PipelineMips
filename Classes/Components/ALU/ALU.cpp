@@ -23,7 +23,7 @@ bool ALU::getZero()
 }
 
 //Função onde é realizada a operação aritmetica da ALU
-int ALU::ALUOperation(/*int instruction,*/ int input1, int input2, string ALUControl)
+int ALU::ALUOperation(Instruction instruction, int input1, int input2, string ALUControl)
 {
 
   int operationResult;
@@ -40,9 +40,8 @@ int ALU::ALUOperation(/*int instruction,*/ int input1, int input2, string ALUCon
   {
     if (ALUControl == "SLL")
     {
-      /*int instructionShamt = this->mips.extractShamt(instruction);
-      int shamt = instructionShamt;
-      operationResult = input1 << shamt;*/
+      int shamt = instruction.shamt;
+      operationResult = input1 << shamt;
     }
     else if (ALUControl == "ADD")
     {
