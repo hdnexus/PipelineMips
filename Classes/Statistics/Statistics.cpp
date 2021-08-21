@@ -10,6 +10,8 @@ Statistics::~Statistics()
 {
 }
 
+//Função que será responsável por imprimir as informações
+//tanto no console quanto em um arquivo de saída
 void Statistics::printInformation()
 {
   /*

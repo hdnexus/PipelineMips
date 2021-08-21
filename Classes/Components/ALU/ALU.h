@@ -17,7 +17,7 @@ public:
   ~ALU();
   void setZero(bool value);
   bool getZero();
-  int ALUOperation(int input1, int input2, string ALUControl);
+  int ALUOperation(/*int instruction,*/ int input1, int input2, string ALUControl);
 };
 
 #endif

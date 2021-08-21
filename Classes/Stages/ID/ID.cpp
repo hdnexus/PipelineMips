@@ -4,6 +4,7 @@ ID::ID() {}
 
 ID::~ID() {}
 
+//Função que executa o estágio ID
 void ID::execute(Instruction instruction, Registers *bankOfRegisters, ID_EX *id_ex, int pcIncremented)
 {
     //bankOfRegisters

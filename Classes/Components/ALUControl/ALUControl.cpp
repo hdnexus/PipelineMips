@@ -34,9 +34,9 @@ string ALUControl::Output(int funct, bool ALUOp1, bool ALUOp0)
     else if (funct == 42)
       return "SLT";
   }
-  else if (ALUOp1 == false and ALUOp0 == false) //para load word e store word
+  else if (ALUOp1 == false and ALUOp0 == false) //para operações de tipo I
   {
-    return "LWandSW";
+    return "IType";
   }
   else if (ALUOp1 == false and ALUOp0 == true) //para branch equal e branch not equal
   {

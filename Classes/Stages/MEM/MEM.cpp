@@ -13,10 +13,23 @@ MEM::~MEM()
 //Tenta entender aonde o data memory encaixa nisso aqui
 void MEM::execute(EX_MEM EX_MEM)
 {
-  //Operação de branch///////////////////////////
+  /////////////////////////////////////////////////////////////////////
+  //Operações de branch/////////////////////////////////////////////////
+  /*
+  int Branch = ex_mem.controlSignal.Branch;
+  int BranchNotEqual = ex_mem.controlSignal.BranchNotEqual;
+  if((Branch == 1 && ex_mem.aluZero ==1) || (BranchNotEqual == 1 && ex_mem.aluZero ==1))
+  {
+    PC = ex_mem.pcBranchIncremented;
+    PCSrc = 1; 
+    //Se o PCSrc = 0, PC = PC +4.
+    //Se o PCSrc = 1, PC = PC + pcBranchIncremented.
+  }
+  A operação de Branch acaba aqui
+  */
+  ////////////////////////////////////////////////////////////////////
 
-  //////////////////////////////////////////////
-
+  /////////////////////////////////////////////////////////////////////
   ///Para Store Word////////////////////////////////////////////////////
   /*
   int MemWrite = ex_mem.controlSignal.MemWrite;
@@ -28,17 +41,19 @@ void MEM::execute(EX_MEM EX_MEM)
   */
   /////////////////////////////////////////////////////////////////////
 
+  /////////////////////////////////////////////////////////////////////
   ///Parte do Load Word////////////////////////////////////////////////
   /*
   int readData = -1;
   int MemRead = ex_mem.controlSignal.MemRead;
   if(MemRead == 1)
   {
-    readData = vamos ter que achar esse read data do datamemory;
+    readData = read data do datamemory;
   }
   */
   /////////////////////////////////////////////////////////////////////
 
+  /////////////////////////////////////////////////////////////////////
   ///Parte para registrar os valores no registrador mem_wb/////////////
   //mem_wb->controlSignal = controlSignal;
   //mem_wb->aluResult = ex_mem.aluResult;

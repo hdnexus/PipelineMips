@@ -10,6 +10,7 @@ WB::~WB()
 {
 }
 
+//função que executa o estágio IF
 void WB::execute(MEM_WB mem_wb)
 {
   /*
@@ -24,9 +25,8 @@ void WB::execute(MEM_WB mem_wb)
   {
     write register é o rt //isso é o wrIndex
     write data é o readData
-    wrIndex = readData; //?? não sei como faz isso kkkk
+    wrIndex = readData; 
     O registrador rt vai receber o readData //Aquele register la do ID
   }
-
   */
 }

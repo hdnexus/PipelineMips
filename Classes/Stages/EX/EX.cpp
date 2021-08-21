@@ -10,42 +10,41 @@ EX::~EX()
 {
 }
 
+//Função que executa o estágio EX
 void EX::execute(ID_EX id_ex)
 {
 
   Util util;
 
   ///Parte para pegar o resultado da operação da ALU////////////////////
-  string AluControl; //Precisamos pegar esse alucontrol
-
-  //ver como pegar esse instrução.funct
+  string AluControl;
   //ALUControl = AluControl.Output(instrução.funct,id_ex.controlSignal.AluOp1, id_ex.controlSignal.AluOp0)
-
   int aluSrc = id_ex.controlSignal.ALUSrc; //responsavel por decidir qual valor vai ser utilizado como input na ALU
   int aluResult;                           //valor do resultado da ALU
   if (aluSrc == 1)                         //Usaremos o segundo input como o immediate extendido
   {
-    aluResult = this->alu.ALUOperation(id_ex.rd1.getValue(), util.binaryStringToInt(id_ex.signExtend.to_string()), AluControl);
+    aluResult = this->alu.ALUOperation(/*id_ex.instruction.getValue(),*/ id_ex.rd1.getValue(), util.binaryStringToInt(id_ex.signExtend.to_string()), AluControl);
   }
   else if (aluSrc == 0) //Usaremos o segundo input como o read data 2
   {
-    aluResult = this->alu.ALUOperation(id_ex.rd1.getValue(), id_ex.rd2.getValue(), AluControl);
+    aluResult = this->alu.ALUOperation(/*id_ex.instruction.getValue(),*/ id_ex.rd1.getValue(), id_ex.rd2.getValue(), AluControl);
   }
-  ////////////////////////////////////////////////////////////////////
 
+  ////////////////////////////////////////////////////////////////////
   ///Parte para realizar o add com shift left////////////////////////
-  //algo assim, tem que ver o pcIncremente e o shiftLeft
-  //int pcBranchIncremented = id_ex.pcIncremented + util.binaryStringToInt(id_ex.signExtend.to_string())).shiftLeft();
-  //Ou usa a função do componente de shift left, ou usa o <<2
+  //Ou usa a função do componente de shift left, ou usa << 2/////////
+  //int shifftedExtendedImmediate = util.binaryStringToInt(id_ex.signExtend.to_string())).shiftLeft();
+  //int pcBranchIncremented = id_ex.pcIncremented + shifftedExtendedImmediate;
   //////////////////////////////////////////////////////////////////
 
+  ////////////////////////////////////////////////////////////////////
   ///Parte para pegar o Write Register wrIndex///////////////////////
   /*
    int RegDst = id_ex.controlSignal.RegDst; 
-   int wrIndex; //não sei se isso é int
+   int wrIndex; 
    if(RegDst == 1)
    {
-     wrIndex = Instruction.rd; //esse rd não é read data, é aquele treco de rs,rt,rd,funct...
+     wrIndex = Instruction.rd; //esse rd não é o read data do registrador, faz parte do rs,rt,rd,funct...
    }
    else if(RegDst == 0)
    {
@@ -54,6 +53,7 @@ void EX::execute(ID_EX id_ex)
   */
   //////////////////////////////////////////////////////////////////
 
+  ////////////////////////////////////////////////////////////////////
   ///Parte para registrar os valores no registrador ex_mem/////////////
   //ex_mem->controlSignal = controlSignal;
   //ex_mem->aluZero = alu.getZero();

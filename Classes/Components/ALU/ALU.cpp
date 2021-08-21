@@ -23,12 +23,12 @@ bool ALU::getZero()
 }
 
 //Função onde é realizada a operação aritmetica da ALU
-int ALU::ALUOperation(int input1, int input2, string ALUControl)
+int ALU::ALUOperation(/*int instruction,*/ int input1, int input2, string ALUControl)
 {
 
   int operationResult;
 
-  if (ALUControl == "LWandSW") //Para casos de Load Word e Store Word
+  if (ALUControl == "IType") //Para casos de Load Word e Store Word
   {
     operationResult = input1 + input2;
   }
@@ -40,11 +40,9 @@ int ALU::ALUOperation(int input1, int input2, string ALUControl)
   {
     if (ALUControl == "SLL")
     {
-      //TA ERRADO ISSO DAQUI, tem que extrair o shamt da instrução
-      //provavelmente o ALUOperation vai ter que receber a instrução como parametro
-      //e com a instrução poderemos extrair o shamt
-      int shamt = this->mips.extractShamt(input1);
-      operationResult = input1 << shamt;
+      /*int instructionShamt = this->mips.extractShamt(instruction);
+      int shamt = instructionShamt;
+      operationResult = input1 << shamt;*/
     }
     else if (ALUControl == "ADD")
     {
