@@ -67,11 +67,11 @@ int ALU::ALUOperation(Instruction instruction, int input1, int input2, string AL
 
   if (operationResult == 0)
   {
-    this->setZero(0); //Zero da ALU
+    this->setZero(1); //Zero da ALU
   }
   else
   {
-    this->setZero(1); //Zero da ALU
+    this->setZero(0); //Zero da ALU
   }
 
   return operationResult;
